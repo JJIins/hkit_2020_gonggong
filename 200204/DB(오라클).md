@@ -111,7 +111,7 @@ MARTIN               SALES                        CHICAGO
 WARD                 SALES                        CHICAGO
 ```
 
-<!--
+
 5. EQUI 조인과 WildCard를 사용하여 이름에 A가 포함된 모든 사원의 부서명을 출력하시오.
 ```console
 ENAME                DNAME
@@ -126,7 +126,7 @@ JAMES                SALES
 
 7 rows selected.
 ```
--->
+
 
 6. NATURAL JOIN을 사용하여 NEW YORK에 근무하는 모든 사원의 이름, 업무, 부서번호 및 부서명을 출력하시오.
 ```console
