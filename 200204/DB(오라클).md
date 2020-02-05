@@ -139,6 +139,7 @@ MILLER               CLERK                      10 ACCOUNTING
 
 7. SELF JOIN을 사용하여 사원의 이름 및 사원번호를 관리자 이름 및 관리자 번호와 함께 출력하시오. 단 각 열의 별칭은 결과 화면과 같이 하시오.
 ```console
+[결과창 오류 수정 : MANAGER에 일반회사원 사원번호가 아니고 MANAGER의 사원 번호가 출력되어야 함]
 EMPLOYEE                   EMP#    MANAGER MRG#
 -------------------- ---------- ---------- --------------------
 FORD                       7566       7566 JONES
