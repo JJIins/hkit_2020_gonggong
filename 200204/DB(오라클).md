@@ -162,7 +162,6 @@ SMITH                      7902       7902 FORD
 13 rows selected.
 ```
 
-<!--
 8. OUTER JOIN, SELF JOIN을 사용하여 관리자가 없는 사원을 포함하여 사원번호를 기준으로 내림차순 정렬을 하여 출력하시오.
 ```console
 [결과창 오류 수정 : MANAGER에 MANAGER 이름을 MGR#에 MANAGER  출력하도록 수정 바람]
@@ -189,7 +188,6 @@ SMITH                      7902       7902 FORD
 14 rows selected.
 ```
 
--->
 9. SELF JOIN을 사용하여 지정한 사원의 이름, 부서번호, 지정한 사원과 동일한 부서에서 근무하는 사원을 출력하시오. 단, 각 열의 별칭은 이름, 부서번호, 동료로 하시오.
 ```console
 이름                   부서번호 동료
