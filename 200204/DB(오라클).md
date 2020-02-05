@@ -165,7 +165,7 @@ SMITH                      7902       7902 FORD
 <!--
 8. OUTER JOIN, SELF JOIN을 사용하여 관리자가 없는 사원을 포함하여 사원번호를 기준으로 내림차순 정렬을 하여 출력하시오.
 ```console
-[결과창 오류 수정 : MANAGER에 MANAGER no를 출력하도록 수정 바람]
+[결과창 오류 수정 : MANAGER에 MANAGER 이름을 MGR#에 MANAGER  출력하도록 수정 바람]
 EMPLOYEE                   EMP#    MANAGER MGR#
 -------------------- ---------- ---------- --------------------
 MILLER                     7782       7782 CLARK
