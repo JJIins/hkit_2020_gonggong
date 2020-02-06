@@ -24,8 +24,8 @@
   ENAME | varchar2 | 10
   DNO | number | 2
 
-  ```
-  Name                                      Null?    Type
+  ```console
+   Name                                      Null?    Type
    ----------------------------------------- -------- ----------------------------
    ENO                                                NUMBER(4)
    ENAME                                              VARCHAR2(10)
