@@ -62,4 +62,39 @@
    DEPT_ID                                            NUMBER(2)
   ```
   
+* 5.EMP 테이블을 삭제하시오.
+  ```
+  SQL> desc emp
+  ERROR:
+  ORA-04043: object emp does not exist
+  ```
+
+* 6.EMPLOYEE2란 이름을 EMP로 변경하시오.
+  ```console
+  SQL> desc emp
+   Name                                      Null?    Type
+   ----------------------------------------- -------- ----------------------------
+   EMP_ID                                             NUMBER(4)
+   NAME                                               VARCHAR2(10)
+   SAL                                                NUMBER(7,2)
+   DEPT_ID                                            NUMBER(2)
+  ```
   
+* 7.DEPT 테이블에서 DNAME 칼럼을 제거하시오.
+  ```console
+  SQL> desc dept
+   Name                                      Null?    Type
+   ----------------------------------------- -------- ----------------------------
+   DNO                                                NUMBER(2)
+   LOC                                                VARCHAR2(13)
+  ```
+  
+* 8.DEPT 테이블에서 LOC 칼럼을 UNUSED로 표시하시오.
+  ```console
+  SQL> desc dept
+   Name                                      Null?    Type
+   ----------------------------------------- -------- ----------------------------
+   DNO                                                NUMBER(2)
+  ```
+  
+* 9.unused 칼럼을 모두 제거하시오.
