@@ -7,4 +7,13 @@
   DNAME | varchar2 | 14
   LOC | varchar2 | 13
 
+```console
+SQL> desc dept
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ DNO                                                NUMBER(2)
+ DNAME                                              VARCHAR2(14)
+ LOC                                                VARCHAR2(13)
+```
+
 * 2.다음 표에 명시된 대로 EMP 테이블을 생성하시오.
