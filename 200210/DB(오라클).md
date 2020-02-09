@@ -146,7 +146,7 @@ SQL> select table_name, constraint_name
   3  where table_name in('DEPT_SAMPLE');
 
 TABLE_NAME                                                   CONSTRAINT_NAME
------------------------------------------------------------- ------------------------------------------------------------
+------------------------------------------------------------ ------------------------------------------
 DEPT_SAMPLE                                                  MY_DEPT_PK
 ```
 
@@ -158,7 +158,7 @@ SQL> select table_name, constraint_name
   3  where table_name in('EMP_SAMPLE');
 
 TABLE_NAME                                                   CONSTRAINT_NAME
------------------------------------------------------------- ------------------------------------------------------------
+------------------------------------------------------------ ------------------------------------------
 EMP_SAMPLE                                                   MY_EMP_PK
 EMP_SAMPLE                                                   MY_EMP_DEPT_FK
 ```
@@ -170,7 +170,7 @@ SQL> select table_name, constraint_name
   3  where table_name in('EMP_SAMPLE');
 
 TABLE_NAME                                                   CONSTRAINT_NAME
------------------------------------------------------------- ------------------------------------------------------------
+------------------------------------------------------------ ------------------------------------------
 EMP_SAMPLE                                                   MY_EMP_PK
 EMP_SAMPLE                                                   MY_EMP_DEPT_FK
 EMP_SAMPLE                                                   EMP_COMMISSION__MIN
