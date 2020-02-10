@@ -18,3 +18,5 @@ select * from department where dno in (select dno from employee group by dno);
         20 RESEARCH                     DALLAS
         30 SALES                        CHICAGO
 ```
+* 설명
+  - select문은 한행씩 실행 후에 where 조건을 비교해서 true면 cursor에 담음.
