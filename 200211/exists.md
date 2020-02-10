@@ -10,6 +10,10 @@ select * from department where dno in (select dno from employee);
 ```sql
 select * from department where dno in (select dno from employee group by dno);
 ```
+* 배열
+```sql
+select * from department where dno in (10, 20, 30, 40);
+```
 * 결과
 ```console
        DNO DNAME                        LOC
