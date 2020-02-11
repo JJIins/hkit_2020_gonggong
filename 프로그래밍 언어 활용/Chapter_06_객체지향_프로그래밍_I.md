@@ -513,26 +513,26 @@ public class Main {
 }
 ```
 * [연습문제] 아래의 sum을 오버로딩 메서드에서 가변인자 메서드로 바꿔 보시오.
-- Main.java
-```java
-public class Main {
-    
-    public static void sum(int a, int b) {
-        System.out.println(a + b);        
-    }
-    
-    public static void sum(int a, int b, int c) {
-        System.out.println(a + b + c);        
-    }
-    
-    public static void main(String args[]) {
-        sum(1, 2);
-        sum(1, 2, 3);
-   }
-}
-```
-- 실행결과
-```console
-3
-6
-```
+  - Main.java
+  ```java
+  public class Main {
+
+      public static void sum(int a, int b) {
+          System.out.println(a + b);        
+      }
+
+      public static void sum(int a, int b, int c) {
+          System.out.println(a + b + c);        
+      }
+
+      public static void main(String args[]) {
+          sum(1, 2);
+          sum(1, 2, 3);
+     }
+  }
+  ```
+  - 실행결과
+  ```console
+  3
+  6
+  ```
