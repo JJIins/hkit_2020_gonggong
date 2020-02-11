@@ -1,6 +1,9 @@
 # Chapter 06 객체지향 프로그래밍 I
+
 ## 3 변수와 메서드
+
 ### 3.8 기본형 매개변수와 참조형 매개변수 [p.264]
+
 * 기본형 매개변수(call by value)
   - Animal.java
   ```java
