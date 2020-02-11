@@ -468,3 +468,71 @@ public class Main {
       }
   }
   ```
+
+## 4 오버로딩(overloading)
+
+### 4.1 오버로딩이란? [p.283]
+```java
+public class Animal {    
+    
+    void func() {        
+    }
+    
+    void func(int a) {        
+    }
+    
+    void func(int a, int b) {        
+    }    
+}
+```
+
+### 4.2 오버로딩의 조건 [p.283]
+* 메서드 이름이 같아야 한다.
+* 매개변수의 개수 또는 타입이 달라야 한다.
+
+### 4.3 오버로딩의 예 [p.283]
+* println 
+
+### 4.4 오버로딩의 장점 [p.285]
+* 메서드를 작성하는 쪽에서는 이름을 짓기도 어렵고, 
+* 메서드를 사용하는 쪽에서는 임을 일일이 구분해서 기억해야하기 때문에 서로 부담이 된다.
+
+### 4.5 가변인자(varargs)와 오버로딩
+* 가변인자
+```java
+public class Main {
+    
+    public static void func(String... str) {
+        System.out.println(str[0]);
+        System.out.println(str[1]);
+    }
+    
+    public static void main(String args[]) {
+        func("test1", "test2");
+   }
+}
+```
+* [연습문제] 아래의 sum을 오버로딩 메서드에서 가변인자 메서드로 바꿔 보시오.
+- Main.java
+```java
+public class Main {
+    
+    public static void sum(int a, int b) {
+        System.out.println(a + b);        
+    }
+    
+    public static void sum(int a, int b, int c) {
+        System.out.println(a + b + c);        
+    }
+    
+    public static void main(String args[]) {
+        sum(1, 2);
+        sum(1, 2, 3);
+   }
+}
+```
+- 실행결과
+```console
+3
+6
+```
