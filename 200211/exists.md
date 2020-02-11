@@ -13,7 +13,7 @@ select * from department where dno in (20, 30, 20, 30, 30, 10, 30, 30, 10, 30, 2
 ```sql
 select * from department where dno in (select dno from employee group by dno);
 /*
-select * from department where dno in (10, 20, 30, 40);
+select * from department where dno in (10, 20, 30);
 */
 ```
 * 결과
