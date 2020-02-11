@@ -406,3 +406,65 @@ public class Main {
   20000
   2.0
   ```
+
+### 3.12 클래스 멤버와 인스턴스 멤버간의 참조와 호출 [p.280]
+* 클래스 메서드와 인스턴스 메서드 간의 호출
+  - Animal.java
+  ```java
+  public class Animal {
+
+      static void func1() {        
+      }
+
+      void func2() {        
+      }
+
+      static void func3() {
+          func1();
+          // func2(); // 에러 발생
+      }
+
+      void func4() {
+          func1();
+          func2();
+      }
+  }
+  ```
+* 클래스 변수와 인스턴스 변수 간의 참조
+  - Animal.java
+  ```java
+  public class Animal {
+
+      static int a;
+      int b;
+
+      static void func1() {
+          a = 10;
+          // b = 20; // 에러 발생
+      }
+
+      void func2() {        
+          a = 10;
+          b = 20;
+      }
+  }
+  ```
+  * 알아두면 좋아요! [p.282]
+  ```java
+  public class Animal {
+
+    int func() {
+        return 0;
+    }
+  }
+  ```
+  ```java
+  public class Main {
+      public static void main(String args[]) {
+          Animal animal = new Animal();
+          int result = animal.func();
+
+          //int result = new Animal().func();
+      }
+  }
+  ```
