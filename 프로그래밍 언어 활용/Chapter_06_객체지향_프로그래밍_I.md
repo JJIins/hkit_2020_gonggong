@@ -539,13 +539,13 @@ public class Main {
 
 ## 5 생성자
 
-### 5.1 생성자란?
+### 5.1 생성자란? [p.291]
 * 생성자 조건
   - 생성자의 이름은 클래스의 이름과 같아야 한다.
   - 생성자는 리턴 값이 없다.
 * 생성자 정의 방법
 
-### 5.2 기본 생성자(default constructor)
+### 5.2 기본 생성자(default constructor) [p.292]
 ```java
 public class Animal {
     
@@ -554,7 +554,7 @@ public class Animal {
 }
 ```
 
-### 5.3 매개변수가 있는 생성자
+### 5.3 매개변수가 있는 생성자 [p.294]
 ```java
 public class Animal {
     
@@ -581,33 +581,128 @@ public class Main {
 }
 ```
 * [연습문제 6-24] 주석 부분에 생성자 코드를 추가해서 실행결과를 만드시오.
-```java
-class Car {
-    String color;        // 색상
-    String gearType;    // 변속기 종류 - auto(자동), manual(수동)
-    int door;            // 문의 개수
+  - Car.java
+  ```java
+  class Car {
+      String color;        // 색상
+      String gearType;    // 변속기 종류 - auto(자동), manual(수동)
+      int door;            // 문의 개수
 
-    Car() {}
+      Car() {}
+
+      /*
+         매개변수가 있는 생성자 코드를 구현하세요.
+      */     
+  }
+  ```
+  - CarTest.java
+  ```java
+  class CarTest {
+      public static void main(String[] args) {
+          Car c1 = new Car();
+          c1.color = "white";
+          c1.gearType = "auto";
+          c1.door = 4;
+
+          Car c2 = new Car("white", "auto", 4);
+
+          System.out.println("c1의 color=" + c1.color + ", gearType=" + c1.gearType+ ", door="+c1.door);
+          System.out.println("c2의 color=" + c2.color + ", gearType=" + c2.gearType+ ", door="+c2.door);
+      }
+  }
+  ```
+  - 실행결과
+  ```console
+  c1의 color=white, gearType=auto, door=4
+  c2의 color=white, gearType=auto, door=4
+  ```
+### 5.4 생성자에서 다른 생성자 호출하기 - this(), this [p295]
+* 생성자에서 다른 생성자를 호출하기 위한 조건
+  - 생성자의 이름으로 클래스 이름 대신 this를 사용한다.
+  - 한 생성자에서 다른 생성자를 호출할 때는 반드시 첫 줄에서만 호출이 가능하다.
+* this()
+  ```java
+  public class Animal {    
+
+      Animal() {
+          System.out.println("hello1");
+      }
+
+      Animal(int a) {
+          this();
+          System.out.println("hello2");
+     }
+  }
+  ```
+  ```java
+  public class Main {
+      public static void main(String[] args) {
+
+          Animal animal1 = new Animal();
+          Animal animal2 = new Animal(1);
+      }
+  }
+  ```
+* this
+```java
+public class Animal {    
     
-    /*
-       매개변수가 있는 생성자 코드를 구현하세요.
-    */     
-}
-```
-```java
-class CarTest {
-    public static void main(String[] args) {
-        Car c1 = new Car();
-        c1.color = "white";
-        c1.gearType = "auto";
-        c1.door = 4;
-
-        Car c2 = new Car("white", "auto", 4);
-
-        System.out.println("c1의 color=" + c1.color + ", gearType=" + c1.gearType+ ", door="+c1.door);
-        System.out.println("c2의 color=" + c2.color + ", gearType=" + c2.gearType+ ", door="+c2.door);
+    int a;
+    
+    void func(int a) {
+        this.a = a;
     }
 }
 ```
 
-### 5.4 생성자에서 다른 생성자 호출하기 - this(), this
+## 6 변수의 초기화
+
+### 6.1 변수의 초기화 [p.300]
+* 멤버변수(클래스변수와 인스턴스변수)와 배열의 초기화는 선택적이지만, 지역변수의 초기화는 필수적이다.
+
+### 6.2 명시적 초기화(explicit initialization) [p.301]
+* 명시적 초기화
+```java
+public class Animal {    
+        
+    static int a = 10;
+    int b = 20;
+}
+```
+* 명시적 초기화가 간단하고 명료하긴 하지만, 보다 복잡한 초기화 작업이 필요할 때는 생성자 또는 
+초기화 블럭(initialization block)을 사용
+
+### 6.3 초기화 블럭(initialization block) [p.302]
+* 클래스 초기화 블럭
+```java
+public class Animal {    
+        
+    static int a;    
+    
+    static {
+        a = 10;
+    }
+}
+```
+* 인스턴스 초기화 블럭
+```java
+public class Animal {    
+        
+    int a;    
+    
+    {
+        a = 10;
+    }
+}
+```
+### 6.4 멤버변수의 초기화 시기와 순서 [p.300]
+* 멤버변수의 초기화 시점
+  - 클래스 변수
+    - 클래스가 처음 로딩될 때 단 한번 초기화 된다.
+  - 인스턴스 변수
+    - 인스턴스가 생성될 때마다 각 인스턴스별로 초기화가 이루어 지다.
+* 멤버변수의 초기화 순서
+  - 클래스 변수
+    - 기본값 -> 명시적초기화 -> 클래스 초기화 블럭
+    - 기본값 -> 명시적초기화 -> 인스턴스 초기화 블럭 -> 생성자
+    
