@@ -107,6 +107,7 @@
   ```
   - 실행결과
   ```console
+  main() : x = 10
   change() : x = 1000
   After change(x)
   main() : x = 1000
