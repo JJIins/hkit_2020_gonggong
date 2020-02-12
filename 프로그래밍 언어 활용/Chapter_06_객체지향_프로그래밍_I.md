@@ -274,12 +274,9 @@ public class Main {
   public class Main {
 
       public static void func(int a) {
-          a--;
-          System.out.println(10 - a);
-
-          if(a > 0) {
-              func(a);    
-          }        
+        /*
+          구현할 
+        */
       }
 
       public static void main(String[] args) {
