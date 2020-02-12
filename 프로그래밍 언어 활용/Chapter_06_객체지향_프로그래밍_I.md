@@ -8,7 +8,7 @@
   - Animal.java
   ```java
   public class Animal {
-      int height;
+      int weight;
   }
   ```
   - Main.java
@@ -21,9 +21,9 @@
 
       public static void main(String[] args) {
           Animal dog = new Animal();        
-          dog.height = 10;
-          diet(dog.height);
-          System.out.println(dog.height);
+          dog.weight = 10;
+          diet(dog.weight);
+          System.out.println(dog.weight);
       }
   }
   ```
@@ -35,7 +35,7 @@
   - Animal.java
   ```java
   public class Animal {
-      int height;
+      int weight;
   }
   ```
   - Main.java
@@ -43,14 +43,14 @@
   public class Main {
 
       public static void diet(Animal arg) {
-          arg.height = arg.height / 2;
+          arg.weight = arg.weight / 2;
       }
 
       public static void main(String[] args) {
           Animal dog = new Animal();        
-          dog.height = 10;
+          dog.weight = 10;
           diet(dog);
-          System.out.println(dog.height);
+          System.out.println(dog.weight);
       }
   }
   ```
@@ -62,7 +62,7 @@
   - Animal.java
   ```java
   public class Animal {
-      int height;
+      int weight;
   }
   ```
   - Main.java
@@ -183,7 +183,7 @@
   - Animal.java
   ```java
   public class Animal {
-      int height;
+      int weight;
   }
   ```
   - Main.java
@@ -192,15 +192,15 @@
 
         public static Animal copy(Animal arg) {
             Animal copyDog = new Animal();
-            copyDog.height = arg.height;
+            copyDog.weight = arg.weight;
             return copyDog;
         }
 
         public static void main(String[] args) {
             Animal dog = new Animal();        
-            dog.height = 10;
+            dog.weight = 10;
             Animal copyDog = copy(dog);
-            System.out.println(copyDog.height);
+            System.out.println(copyDog.weight);
         }
     }
   ```
