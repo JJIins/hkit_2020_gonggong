@@ -1,11 +1,14 @@
+## Chapter 12_시퀀스와 인덱스
+
+### 내용정리
 * 트리 자료 구조
   - https://www.youtube.com/watch?v=h7TlYy-jU-o
 * index rebuild를 둘러싼 논쟁
   - https://ukja.tistory.com/80?category=12613
 * index rebuild 대상
   - https://m.blog.naver.com/js_family/220450543808
-  
-  ## Chapter 12_시퀀스와 인덱스
+
+### 연습문제
 
 * 1.사원 테이블의 사원번호가 자동으로 생성되도록 시퀀스를 생성하시오.
 ```console
