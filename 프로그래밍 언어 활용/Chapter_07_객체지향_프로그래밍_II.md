@@ -104,14 +104,14 @@ public class Point {
 }
 ```
 * 상속관계(is a)
-  - Circle is a Point
+  - Circle is a Point.
 ```java
 public class Circle extends Point {    
     int r;
 }
 ```
 * 포함관계
-  - Circle has a Point
+  - Circle has a Point.
 ```java
 public class Circle {
     Point p;
