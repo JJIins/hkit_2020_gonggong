@@ -197,7 +197,7 @@ public class Main {
 ```console
 (10, 20)좌표에 반지름 5크기의 원을 그렸습니다.
 ```
-### 1.4 단일 상속(Simgle inheritance)
+### 1.4 단일 상속(Simgle inheritance) [p.323]
 * 자바는 단일 상속만 허용한다.
 ```java
 public class Point {
@@ -217,4 +217,36 @@ public class Circle extends Point, Color {  // 에러 발생
 
 }
 ```
+### 1.5 Object클래스 = 모든 클래스의 조상 [p.325]
+* 모든 클래스의 조상 클래스이다.
+* 모든 클래스가 자동으로 상속 받는다.
+* Object 상속을 생략해도 컴파일러가 자동으로 상속시킨다.
 
+## 2 오버라이딩(overriding)
+* 사전적 의미
+  - override : ~위에 덥어쓰다(overwite)
+```java
+public class Animal {    
+        
+    void eat() {
+        System.out.println("Animal 음식 먹기");
+    }
+}
+```
+```java
+public class Mammal extends Animal {    
+    
+    void eat() {
+        System.out.println("Mammal 음식 먹기");
+    }
+}
+```
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Mammal mammal = new Mammal();
+        mammal.eat();
+    }
+}
+```
