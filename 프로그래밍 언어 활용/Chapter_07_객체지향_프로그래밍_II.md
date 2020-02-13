@@ -10,4 +10,87 @@
     - 부모(parent)클래스, 상위(super)클래스, 기반(base)클래스
   - 자손 클래스
     - 자식(child)클래스, 하위(sub)클래스, 파생된(derived)클래스
+ * 멤버변수 상속
+ ```java
+ public class Animal {    
+        
+    int weight;
+}
+ ```
+ ```java
+ public class Mammal extends Animal {
     
+    int toothSize;
+}
+ ```
+ ```java
+ public class Dog extends Mammal {
+
+}
+ ```
+ ```java
+ public class Main {
+
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.weight = 10;
+        dog.toothSize = 20;
+    }
+}
+ ```
+* 메서드 상속
+```java
+public class Animal {    
+        
+    void eat() {
+        System.out.println("음식 먹기");
+    }
+}
+```
+```java
+public class Mammal extends Animal {    
+    
+}
+```
+public class Main {
+
+    public static void main(String[] args) {
+        Mammal mammal = new Mammal();
+        mammal.eat();
+    }
+}
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Mammal mammal = new Mammal();
+        mammal.eat();
+    }
+}
+```
+* 생성자와 초기화 블럭은 상속되지 않는다. 멤버만 상속된다.
+* 자손 클래스의 멤버 개수는 조상 클래스보다 항상 같거나 많다.
+* 생성자 상속
+```java
+public class Animal {    
+
+  Animal() {
+        System.out.println("Animal Init");
+    }
+}
+```
+```java
+public class Mammal extends Animal {    
+    
+}
+```
+```java
+public class Animal {    
+        
+    int weight;
+    
+    Animal() {
+        System.out.println("Animal Init");
+    }
+}
+```
