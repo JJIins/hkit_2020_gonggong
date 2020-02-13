@@ -118,3 +118,73 @@ public class Circle {
     int r;
 }
 ```
+* [연습문제] 다음 주석부분에 코드를 is-a 관계로 구현해 보자.
+* Point.java
+```java
+public class Point {
+    int x;
+    int y;
+}
+```
+* Circle.java
+```java
+public class Circle extends Point {    
+    int r;
+    
+    /*
+      draw 메서드 구현 부분
+    */
+}
+```
+* Main.java
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        /*
+          코드 구현 부분
+        */
+        c.draw();
+    }
+}
+```
+* 실행결과
+```console
+(10, 20)좌표에 반지름 5크기의 원을 그렸습니다.
+```
+* [연습문제] 다음 주석부분에 코드를 has-a 관계로 구현해 보자.
+* Point.java
+```java
+public class Point {
+    int x;
+    int y;
+}
+```
+* Circle.java
+```java
+public class Circle extends Point {    
+    int r;
+    
+    /*
+      draw 메서드 구현 부분
+    */
+}
+```
+* Main.java
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Circle c = new Circle();
+        /*
+          코드 구현 부분
+        */
+        c.draw();
+    }
+}
+```
+* 실행결과
+```console
+(10, 20)좌표에 반지름 5크기의 원을 그렸습니다.
+```
