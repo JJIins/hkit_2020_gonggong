@@ -223,6 +223,7 @@ public class Circle extends Point, Color {  // 에러 발생
 * Object 상속을 생략해도 컴파일러가 자동으로 상속시킨다.
 
 ## 2 오버라이딩(overriding)
+### 2.1 오버라이딩이란? [p.327]
 * 사전적 의미
   - override : ~위에 덥어쓰다(overwite)
 ```java
@@ -247,6 +248,37 @@ public class Main {
     public static void main(String[] args) {
         Mammal mammal = new Mammal();
         mammal.eat();
+    }
+}
+```
+
+### 2.2 오버라이딩의 조건 [p.328]
+* 자손클래스에서 오버라이딩하는 메서드는 조상 클래스의 메서드와
+  - 이름이 같아야 한다.
+  - 매재변수가 같아야 한다.
+  - 반환타입이 같아야 한다.
+
+### 2.3 오버로딩 vs. 오버라이딩 [p.329]
+* 오버로딩(overloading)
+  - 기존에 없는 새로운 메서드를 정의하는 것
+* 오버라이딩(overrding)
+  - 상속받은 메서드의 내용을 변경하는 것(change, modify)
+  
+### 2.4 super
+```java
+public class Animal {    
+        
+    int weight = 10;    
+}
+```
+```java
+public class Mammal extends Animal {    
+    
+    // int super_weight = 20; 실제로는 super_weight로 상속되어 있다.
+    int weight = 20; // 실제로는 this_weight로 보면 된다.
+    
+    public Mammal() {
+        System.out.println(super.weight);
     }
 }
 ```
