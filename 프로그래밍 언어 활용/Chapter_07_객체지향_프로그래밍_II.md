@@ -264,7 +264,7 @@ public class Main {
 * 오버라이딩(overrding)
   - 상속받은 메서드의 내용을 변경하는 것(change, modify)
   
-### 2.4 super
+### 2.4 super [
 ```java
 public class Animal {    
         
