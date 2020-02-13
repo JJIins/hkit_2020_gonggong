@@ -96,3 +96,25 @@ public class Animal {
     }
 }
 ```
+### 1.2 클래스간의 관계 - 포함관계
+```java
+public class Point {
+    int x;
+    int y;
+}
+```
+* 상속관계(is a)
+  - Circle is a Point
+```java
+public class Circle extends Point {    
+    int r;
+}
+```
+* 포함관계
+  - Circle has a Point
+```java
+public class Circle {
+    Point p;
+    int r;
+}
+```
