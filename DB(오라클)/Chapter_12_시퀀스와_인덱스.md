@@ -34,6 +34,10 @@ SQL> select * from emp01;
 ```
 
 * 3.EMP01 테이블의 이름 칼럼을 인덱스로 설정하되 인덱스 이름을 IDX_EMP01_ENAME로 지정하시오.
+```sql
+select index_name, table_name, column_name from user_ind_columns
+where table_name in ('EMP01');
+```
 ```console
 INDEX_NAME                               TABLE_NAME                               COLUMN_NAME
 ---------------------------------------- ---------------------------------------- -------------
