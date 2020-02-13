@@ -10,25 +10,25 @@
     - 부모(parent)클래스, 상위(super)클래스, 기반(base)클래스
   - 자손 클래스
     - 자식(child)클래스, 하위(sub)클래스, 파생된(derived)클래스
- * 멤버변수 상속
- ```java
+* 멤버변수 상속
+```java
  public class Animal {    
         
     int weight;
 }
- ```
- ```java
+```
+```java
  public class Mammal extends Animal {
     
     int toothSize;
 }
- ```
- ```java
+```
+```java
  public class Dog extends Mammal {
 
 }
- ```
- ```java
+```
+```java
  public class Main {
 
     public static void main(String[] args) {
@@ -37,7 +37,7 @@
         dog.toothSize = 20;
     }
 }
- ```
+```
 * 메서드 상속
 ```java
 public class Animal {    
@@ -52,6 +52,7 @@ public class Mammal extends Animal {
     
 }
 ```
+```java
 public class Main {
 
     public static void main(String[] args) {
@@ -59,6 +60,7 @@ public class Main {
         mammal.eat();
     }
 }
+```
 ```java
 public class Main {
 
