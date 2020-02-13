@@ -96,7 +96,7 @@ public class Animal {
     }
 }
 ```
-### 1.2 클래스간의 관계 - 포함관계
+### 1.2 클래스간의 관계 - 포함관계 [p.316]
 ```java
 public class Point {
     int x;
@@ -118,7 +118,16 @@ public class Circle {
     int r;
 }
 ```
-* [연습문제] 다음 주석부분에 코드를 is-a 관계로 구현해 보자.
+### 1.3 클래스간의 관계 결정하기 [p.317]
+* 상속관계
+  ```
+  ~은 ~이다.(is-a)
+  ```
+* 포함관계
+  ```
+  ~은 ~을 가지고 있다.(has-a)
+  ```
+### [연습문제] 다음 주석부분에 코드를 is-a 관계로 구현해 보자.
 * Point.java
 ```java
 public class Point {
@@ -153,7 +162,7 @@ public class Main {
 ```console
 (10, 20)좌표에 반지름 5크기의 원을 그렸습니다.
 ```
-* [연습문제] 다음 주석부분에 코드를 has-a 관계로 구현해 보자.
+### [연습문제] 다음 주석부분에 코드를 has-a 관계로 구현해 보자.
 * Point.java
 ```java
 public class Point {
