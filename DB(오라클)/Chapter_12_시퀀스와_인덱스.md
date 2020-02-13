@@ -18,10 +18,10 @@ from user_sequences
 where sequence_name like '%EMP%';
 ```
 ```console
-SEQUENCE_NAME                                                 MIN_VALUE  MAX_VALUE INCREMENT_BY CY
------------------------------------------------------------- ---------- ---------- ------------ --
-EMPLOYEES_SEQ                                                         1 1.0000E+28            1 N
-EMP_SEQ                                                               1     100000            1 N
+SEQUENCE_NAME                             MIN_VALUE  MAX_VALUE INCREMENT_BY CY
+---------------------------------------- ---------- ---------- ------------ --
+EMPLOYEES_SEQ                                     1 1.0000E+28            1 N
+EMP_SEQ                                           1     100000            1 N
 ```
 
 * 2.사원번호를 시퀀스로부터 발급받으시오.
