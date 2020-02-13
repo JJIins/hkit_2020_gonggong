@@ -11,6 +11,12 @@
 ### 연습문제
 
 * 1.사원 테이블의 사원번호가 자동으로 생성되도록 시퀀스를 생성하시오.
+```sql
+select sequence_name, min_value, max_value, 
+increment_by, cycle_flag
+from user_sequences
+where sequence_name like '%EMP%';
+```
 ```console
 SEQUENCE_NAME                                                 MIN_VALUE  MAX_VALUE INCREMENT_BY CY
 ------------------------------------------------------------ ---------- ---------- ------------ --
