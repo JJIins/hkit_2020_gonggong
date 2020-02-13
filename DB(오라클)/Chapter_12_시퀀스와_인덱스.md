@@ -39,9 +39,9 @@ select index_name, table_name, column_name from user_ind_columns
 where table_name in ('EMP01');
 ```
 ```console
-INDEX_NAME                               TABLE_NAME                               COLUMN_NAME
----------------------------------------- ---------------------------------------- -------------
-SYS_C007033                              EMP01                                    EMPNO
-IDX_EMP01_ENAME                          EMP01                                    ENAME
+INDEX_NAME                     TABLE_NAME                     COLUMN_NAME
+------------------------------ ------------------------------ -------------
+SYS_C007033                    EMP01                          EMPNO
+IDX_EMP01_ENAME                EMP01                          ENAME
 ```
 
