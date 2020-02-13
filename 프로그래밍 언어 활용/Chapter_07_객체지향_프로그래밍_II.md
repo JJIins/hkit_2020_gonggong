@@ -197,3 +197,24 @@ public class Main {
 ```console
 (10, 20)좌표에 반지름 5크기의 원을 그렸습니다.
 ```
+### 1.4 단일 상속(Simgle inheritance)
+* 자바는 단일 상속만 허용한다.
+```java
+public class Point {
+    int x;
+    int y;
+}
+```
+```java
+public class Color {
+    int r;
+    int g;
+    int b;
+}
+```
+```java
+public class Circle extends Point, Color {  // 에러 발생
+
+}
+```
+
