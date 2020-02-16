@@ -341,3 +341,35 @@ public class Ch7Ex1 {
 버스가 달리다.
 빵빵~.
 ```
+
+## 3 package와 import
+
+### 3.1 패키지(package) [p.336]
+* 목적 - 이름 충돌을 막을 수 있다.
+* 패키지 조건
+  - 하나의 소스파일에는 첫번째 문장으로 단 한번의 패키지 선언만 허용한다.
+  - 모든 클래스는 반드시 하나의 패키지에 속해야 한다.
+  - 패키지는 점(.)을 구분자로 하여 계층구조로 구성할 수 있다.
+  - 패키지는 물리적으로 클래스 파일(.class)을 포함하는 하나의 디렉토리이다.
+
+### 3.2 패키지 선언 [p.337]
+```java
+package 패키지명;
+```
+```java
+package com.javachobo.book;
+
+class PackageTest {
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	}
+}
+```
+* 338쪽 생략
+
+### 3.3 import문
+* 목적 : 패키지 일부를 생략하고 클래스를 사용할 수 있음.
+* 이클립스 단축키 : Ctrl + Shift + o
+
+### 3.4 import문의 선언
+
