@@ -365,11 +365,71 @@ class PackageTest {
 	}
 }
 ```
-* 338쪽 생략
+* 338쪽 생략...
 
-### 3.3 import문
+### 3.3 import문 [p.340]
 * 목적 : 패키지 일부를 생략하고 클래스를 사용할 수 있음.
 * 이클립스 단축키 : Ctrl + Shift + o
 
-### 3.4 import문의 선언
+### 3.4 import문의 선언 [p.340]
+* 일반적으로 소스파일(.java)의 구성은 다음 순서로 되어 있다.
+  - package문
+  - import문
+  - 클래스 선언
+  
+* import문을 선언하는 방법
+  - import 패키지명.클래스명;
+  - import 패키지명.*;
+  
+* ImportTest.java
+```java
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+class ImportTest 
+{
+    public static void main(String[] args) 
+    {
+         Date today = new Date();
+         
+         SimpleDateFormat date = new SimpleDateFormat("yyyy/MM/dd");
+         SimpleDateFormat time = new SimpleDateFormat("hh:mm:ss a");
+
+         System.out.println("오늘 날짜는 " + date.format(today));
+         System.out.println("현재 시간은 " + time.format(today));
+    }
+}
+```
+* 실행결과
+```console
+오늘 날짜는 2020/02/17
+현재 시간은 01:13:40 오전
+```
+### 3.5 static import문
+* 생략...
+
+## 4 제어자(modifier)
+
+### 4.1 제어자란? [p.344]
+* 접근 제어자 : public, protected, drfault, private
+* 그외 : static, final , abstract, native, transient, synchronized, volatile, strictfp
+
+### 4.2 static - 클래스의, 공통적인 [p.344]
+
+### 4.3 final - 마지막의, 변경될 수 없는 [p.345]
+* final
+  - 클래스
+    - 상속 불가    
+    - 상속 계층 구조에서 '마지막' 클래스입니다.
+  - 메서드
+    - 오버라이딩 불가
+  - 멤버변수, 지역변수
+    - 변수값 변경 불가
+    - p.30쪽에서 설명함
+    
+    
+### 4.4 abstract - 추상의, 미완성의
+* p.375에서 설명...
+
+### 
+### 
