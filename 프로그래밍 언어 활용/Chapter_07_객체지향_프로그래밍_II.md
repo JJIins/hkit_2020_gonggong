@@ -560,7 +560,9 @@ public class Ch7Ex6 {
     
 ## 5 다형성
 
-### 5.1 다형성이란?
+### 5.1 다형성이란? [p.354]
+* 부모클래스로 자클래스 인스턴스를 참조할 수 있도록 하였음.
+
 ```java
 public interface Queen {
 
@@ -615,3 +617,54 @@ public class Main {
     }
 }
 ```
+
+### 5.2 참조변수의 형변환 [p.356]
+* 자손타입 -> 조상타입(Up-casting)
+	- 형변환 생략가능
+* 자손타입 <- 조상타입(Down-casting)
+  - 형변환 생략불가
+  
+### 5.3 instanceof 연산자 [p.362]
+* 참조변수(객체)의 타입을 알아내는 명령어
+
+### 5.4 참조변수와 인스턴스의 연결 [p.364]
+* 멤버변수의 경우 참조변수의 타입에 따라 달라진다.
+
+### 5.5 매개변수의 다형성 [p.367]
+* 참조변수의 다형성은 메서드의 매개변수에도 적용된다.(당연한 소리)
+
+### 5.6 여러 종류의 객체를 배열로 다루기 [p.370]
+```java
+public class Product {
+
+}
+```
+```java
+public class TV extends Product {
+
+}
+```
+```java
+public class PC extends Product {
+
+}
+```
+```java
+public class Audio extends Product {
+
+}
+```
+```java
+ublic class Main {
+
+    public static void main(String[] args) {
+                
+        TV tv = new TV();
+        PC pc = new PC();
+        Audio audio = new Audio();
+        
+        Product[] products = {tv, pc, audio};
+    }
+}
+```
+
