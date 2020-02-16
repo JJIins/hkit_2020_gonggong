@@ -323,3 +323,21 @@ public class Mammal extends Animal {
     }
 }
 ```
+### 연습문제
+* Car와 Bus 클래스를 구현하세요. 단 Bus는 Car를 상속해야 한다.
+```java
+public class Ch7Ex1 {
+
+    public static void main(String[] args) {
+
+        Bus bus = new Bus();
+        bus.run();
+        bus.ppangppang();
+    }
+}
+```
+```console
+달리다.
+버스가 달리다.
+빵빵~.
+```
