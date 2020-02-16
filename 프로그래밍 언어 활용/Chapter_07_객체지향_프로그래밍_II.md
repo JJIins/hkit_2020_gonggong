@@ -543,4 +543,22 @@ public class Ch7Ex6 {
       }
   }  
   ```
-### 
+### 4.6 제어자(modifier)의 조합
+* 대상에 따라 사용할 수 있는 제어자
+  - 클래스 
+    - public, (default)
+    - final, abstract
+  - 메서드
+    - 모든 접근 제어자
+    - final, abstract, static
+  - 멤버변수
+    - 모든 접근 제어자
+    - final, static
+  - 지역변수
+    - final
+    
+## 5 다형성
+
+### 5.1 다형성이란?
+
+  
