@@ -284,7 +284,27 @@ public class Main {
   - 기존에 없는 새로운 메서드를 정의하는 것
 * 오버라이딩(overrding)
   - 상속받은 메서드의 내용을 변경하는 것(change, modify)
-  
+### 연습문제
+* Car와 Bus 클래스를 구현하세요. 단 Bus는 Car를 상속해야 한다.
+```java
+public class Ch7Ex1 {
+
+    public static void main(String[] args) {
+        
+        Car car = new Car();
+        car.run();
+        
+        Bus bus = new Bus();
+        bus.run();
+        bus.ppangppang();
+    }
+}
+```
+```console
+달리다.
+버스가 달리다.
+빵빵~.
+```  
 ### 2.4 super [
 ```java
 public class Animal {    
