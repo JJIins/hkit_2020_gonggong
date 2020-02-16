@@ -476,6 +476,7 @@ public class Ch7Ex5 {
     
     
 ### 4.4 abstract - 추상의, 미완성의 [p.347]
+* 추상화 : 실제 기능 부분의 구체적인 구현을 추상화해서 표현
 * p.375에서 설명...
 
 ### 4.5 접근 제어자(access modifier) [p.348]
@@ -560,5 +561,57 @@ public class Ch7Ex6 {
 ## 5 다형성
 
 ### 5.1 다형성이란?
+```java
+public interface Queen {
 
-  
+    public void spawn();
+}
+```
+```java
+public interface Soldier {
+
+    public void attack();
+}
+```
+```java
+public interface Worker {
+
+    public void work();
+}
+```
+```java
+public class Ant implements Worker, Soldier, Queen {
+
+    public void spawn() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    public void attack() {
+        // TODO Auto-generated method stub
+        
+    }
+
+    public void work() {
+        // TODO Auto-generated method stub
+        
+    }
+
+}
+```
+```java
+public class Main {
+
+    public static void main(String[] args) {
+                
+        Queen queenAnt = new Ant(); 
+        queenAnt.spawn();
+        
+        Soldier soldierAnt = new Ant();
+        soldierAnt.attack();
+        
+        Worker workAnt = new Ant();
+        workAnt.work();        
+    }
+}
+```
