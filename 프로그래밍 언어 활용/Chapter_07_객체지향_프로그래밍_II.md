@@ -96,6 +96,27 @@ public class Animal {
     }
 }
 ```
+### 연습문제
+* Car와 Bus 클래스를 구현하세요. 단 Bus는 Car를 상속해야 한다.
+```java
+public class Ch7Ex1 {
+
+    public static void main(String[] args) {
+        
+        Car car = new Car();
+        car.run();
+        
+        Bus bus = new Bus();
+        bus.run();
+        bus.ppangppang();
+    }
+}
+```
+```console
+달리다.
+달리다.
+빵빵~.
+```
 ### 1.2 클래스간의 관계 - 포함관계 [p.316]
 ```java
 public class Point {
