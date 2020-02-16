@@ -287,7 +287,7 @@ public class Main {
 ### 연습문제
 * Car와 Bus 클래스를 구현하세요. 단 Bus는 Car를 상속해야 한다.
 ```java
-public class Ch7Ex1 {
+public class Ch7Ex2 {
 
     public static void main(String[] args) {
         
@@ -326,7 +326,7 @@ public class Mammal extends Animal {
 ### 연습문제
 * Car와 Bus 클래스를 구현하세요. 단 Bus는 Car를 상속해야 한다.
 ```java
-public class Ch7Ex1 {
+public class Ch7Ex3 {
 
     public static void main(String[] args) {
 
@@ -428,8 +428,29 @@ class ImportTest
     - p.30쪽에서 설명함
     
     
-### 4.4 abstract - 추상의, 미완성의
+### 4.4 abstract - 추상의, 미완성의 [p.347]
 * p.375에서 설명...
 
-### 
+### 4.5 접근 제어자(access modifier) [p.348]
+* 접근 제어자 종류
+  - private : 같은 클래스 내에서만 접근이 가능
+  - default : 같은 패키지 내에서만 접근이 가능
+  - protected 
+    - 같은 패키지 내에서
+    - 다른 패키지의 자손 클래스에서 접근이 가능
+  - public : 접근 제한이 없음
+* public > protected > default > private
+* 접근 제어자 대상
+  - 클래스 
+    - public, (default)
+  - 메서드, 멤버변수
+    - public, protected, (default), private
+  - 지역변수
+    - 없음
+* 접근 제어자를 사용하는 이유
+  - 외부로부터 데이터를 보호하기 위해서
+  - 외부에서 불필요한, 내부적으로만 사용되는, 부분을 감추기 위해서
+
+### 연습문제
+
 ### 
