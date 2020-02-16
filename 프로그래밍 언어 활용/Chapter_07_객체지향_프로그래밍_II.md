@@ -430,9 +430,10 @@ class ImportTest
 
 ### 연습문제
 * Car와 Bus 클래스를 구현하세요. 
-	- 단 Bus는 Car를 상속해야 한다.
-  - Ch7Ex5는 kr.hkit.ch7패키지로, Car와 Buss는 kr.hkit.ch7.model 패키지로 생성하고, 
-  Ch7Ex5에서 Bus 클래스를 사용할 수 있도록 import 
+  - 단 Bus는 Car를 상속해야 한다.
+  - Ch7Ex5는 kr.hkit.ch7패키지로, 
+  - Car와 Bus는 kr.hkit.ch7.model 패키지로 생성하고, 
+  - Ch7Ex5에서 Bus 클래스를 사용할 수 있도록 import 하세요.
 ```java
 package kr.hkit.ch7;
 
@@ -498,5 +499,48 @@ public class Ch7Ex5 {
   - 외부에서 불필요한, 내부적으로만 사용되는, 부분을 감추기 위해서
 
 ### 연습문제
+* Car와 Bus 클래스를 구현하세요. 
+  - 단 Bus는 Car를 상속해야 한다.
+  - Ch7Ex5는 kr.hkit.ch7패키지로, 
+  - Car는 kr.hkit.ch7.parent로, 
+  - bus는 kr.hkit.ch7.model 패키지로 생성하고, 
+  - Ch7Ex5에서 Bus 클래스를 사용할 수 있도록 import 하세요.
+```java
+package kr.hkit.ch7;
 
+public class Ch7Ex6 {
+
+    public static void main(String[] args) {
+
+        Bus bus = new Bus();
+        bus.run();
+        bus.ppangppang();
+    }
+}
+```
+```console
+달리다.
+버스가 달리다.
+빵빵~.
+```
+
+* 생성자의 접근 제어자
+  * 싱글톤 패턴
+  ```java
+  public class Device {
+
+      private static Device instance;
+
+      private Device() {
+
+      }
+
+      public static Device getInstance() {
+          if(instance == null) {
+              instance = new Device();
+          }
+          return instance;
+      }
+  }  
+  ```
 ### 
