@@ -366,6 +366,28 @@ class PackageTest {
 }
 ```
 * 338쪽 생략...
+### 연습문제
+* Car와 Bus 클래스를 구현하세요. 
+	- 단 Bus는 Car를 상속해야 한다.
+  - 패키지를 kr.hkit.ch7로 만들기.
+```java
+package kr.hkit.ch7;
+
+public class Ch7Ex4 {
+
+    public static void main(String[] args) {
+
+        Bus bus = new Bus();
+        bus.run();
+        bus.ppangppang();
+    }
+}
+```
+```console
+달리다.
+버스가 달리다.
+빵빵~.
+```
 
 ### 3.3 import문 [p.340]
 * 목적 : 패키지 일부를 생략하고 클래스를 사용할 수 있음.
@@ -404,6 +426,30 @@ class ImportTest
 ```console
 오늘 날짜는 2020/02/17
 현재 시간은 01:13:40 오전
+```
+
+### 연습문제
+* Car와 Bus 클래스를 구현하세요. 
+	- 단 Bus는 Car를 상속해야 한다.
+  - Ch7Ex5는 kr.hkit.ch7패키지로, Car와 Buss는 kr.hkit.ch7.model 패키지로 생성하고, 
+  Ch7Ex5에서 Bus 클래스를 사용할 수 있도록 import 
+```java
+package kr.hkit.ch7;
+
+public class Ch7Ex5 {
+
+    public static void main(String[] args) {
+
+        Bus bus = new Bus();
+        bus.run();
+        bus.ppangppang();
+    }
+}
+```
+```console
+달리다.
+버스가 달리다.
+빵빵~.
 ```
 ### 3.5 static import문
 * 생략...
