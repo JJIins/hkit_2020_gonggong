@@ -209,3 +209,90 @@ public class Main {
 
 ### 연습문제
 * 위의 VideoDriver 클래스를 인터페이스로 변경하세요.
+
+### 7.8 인터페이스의 이해
+```
+- 클래스를 사용하는 쪽과 클래스를 제공하는 쪽이 있다.
+- 메서드를 사용(호출)하는 쪽에서 사용하려는 메서드의 선언부만 알면 된다.(내용은 몰라도 된다.)
+```
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        
+        VideoDriver vd = null;
+        vd.displayText("Hello World");
+    }
+}
+```
+
+### 7.9 디폴트 메서드와 static메서드
+* JDK_1.8부터 도입됨.
+
+
+## 8 내부 클래스(inner class)
+
+### 8.1 내부 클래스란?
+* 내부 클래스는 클래스 내에서 선언된 클래스이다.
+* 내부 클래스의 장점
+  - 내부 클래스에서 외부 클래스의 멤버들을 쉽게 접근할 수 있다.
+  - 코드의 복잡성을 줄일 수 있다.(캡슐화)
+  
+### 8.2 내부 클래스의 종류와 특징
+* 인스턴스 클래스
+  - 외부 클래스의 멤버변수 선언위치에 선언하며, 외부 클래스의 인스턴스 멤버처럼 다루어 진다.
+  - 주로 외부 클래스의 인스턴스 멤버들과 관련된 작업에 사용될 목적으로 선언된다.
+* 스태틱 클래스
+  - 외부 클래스의 멤버변수 선언위치에 선언하며, 외부 클래스의 static 멤버처럼 다루어 진다.
+  - 주로 외부 클래스의 static멤버, 특히 static 메서드에서 사용될 목적으로 선언된다.
+* 지역 클래스
+  - 외부 클래스의 메서드나 초기화 블록 안에 선언하며, 선언된 영역 내부에서만 사용될 수 있다.
+* 익명 클래스
+  - 클래스의 선언과 객체의 생성을 동시에 하는 이름 없는 클래스(일회용)
+  
+### 8.3 내부 클래스 선언
+* 멤버 변수 선언부와 같이 사용됨
+```java
+public class Outer {
+
+    static class StaticInner {}
+    class InstanceInner {}
+    
+    void method() {
+        class LocalInner {}        
+    }
+}
+```
+
+### 8.4 내부 클래스의 제어자와 접근성
+* 멤버변수와 똑같은 외부 접근자 범위를 가짐
+
+### 8.5 익명 클래스(anonymous class)
+* 상속을 생략하고도 재정의(overriding)해서 사용할 수 있음.
+```java
+public class Car {
+    void run() {
+        System.out.println("달리다.");
+    }
+}
+```
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Car car = new Car();
+        car.run();
+        
+        Car car2 = new Car() {
+            
+            @Override
+            public void run() {                
+                System.out.println("버스가 달리다.");
+            }
+        };
+        
+        car2.run();
+    }
+}
+```
