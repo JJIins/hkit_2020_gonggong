@@ -63,7 +63,61 @@ public abstract class Car {
 }
 ```
 ## 7 인터페이스
-### 7.1 인터페이스란?
+
+### 7.1 인터페이스란? [p.381]
+* 오직 추상메서드와 상수만을 멤버로 가질 수 있음.
+
+### 7.2 인터페이스의 작성 [p.381]
+* 모든 멤버변수는 public static final 이어야 하며, 이를 생략할 수 있다.
+  - 생략해도 컴파일러가 자동으로 다시 static final을 붙여 준다.
+* 모든 메서드는 public abstract이어야 하며, 이를 생략할 수 있다.
+  - 생략해도 컴파일러가 자동으로 abstract를 붙여 준다.
+* [참고] JDK_1.8에서 default 메서드와 static 메서드 추가
+
+### 7.3 인터페이스의 상속 [p.382]
+* 생략...
+  - 인터페이스를 상속해서 쓰는 경우가 드뭄.
+
+### 인터페이스의 구현 [p.382]
+```java
+public interface Car {
+
+    void run();
+}
+```
+```java
+public class Bus implements Car {
+
+    void run() {
+        System.out.println("버스가 달리다.");
+    }
+}
+```
+```java
+public class Taxi implements Car {
+
+    void run() {
+        System.out.println("택시가 달리다.");
+    }
+}
+```
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        
+        Car car = new Bus();
+        car.run();
+        
+        car = new Taxi();
+        car.run();
+    }
+}
+```
+
+
+
+
 ```java
 public interface Car {
 
