@@ -305,7 +305,7 @@ public class Ch7Ex2 {
 버스가 달리다.
 빵빵~.
 ```  
-### 2.4 super [
+### 2.4 super [p.330]
 ```java
 public class Animal {    
         
