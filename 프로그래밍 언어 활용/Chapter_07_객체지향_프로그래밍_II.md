@@ -108,7 +108,7 @@ public class Ch7Ex1 {
         
         Bus bus = new Bus();
         bus.run();  // "달리다" 출력
-        bus.ppangppang();  // "빵빵~" 
+        bus.ppangppang();  // "빵빵~" 출력
     }
 }
 ```
