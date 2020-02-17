@@ -104,7 +104,7 @@ public class Ch7Ex6 {
 ## 5 다형성
 
 ### 5.1 다형성이란? [p.354]
-* 멤버변수의 다형성
+* 멤버변수의 다형성??
 ```java
 public class Car {
 
