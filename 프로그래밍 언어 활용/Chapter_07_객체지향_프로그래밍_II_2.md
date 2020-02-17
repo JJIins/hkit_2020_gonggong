@@ -104,7 +104,40 @@ public class Ch7Ex6 {
 ## 5 다형성
 
 ### 5.1 다형성이란? [p.354]
-* 
+* 멤버변수의 다형성
+```java
+public class Car {
+
+    int speed = 10;
+}
+```
+```java
+public class Bus extends Car {
+
+    int speed = 20;
+}
+```
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Car car = new Car();
+        System.out.println(car.speed);
+        
+        Bus bus = new Bus();
+        System.out.println(bus.speed);
+        
+        Car car2 = new Bus();
+        System.out.println(car2.speed);       
+    }
+}
+```
+```console
+10
+20
+10
+```
+* 메서드의 다형성
 ```java
 public class Car {
 
@@ -135,6 +168,11 @@ public class Main {
         car2.run();       
     }
 }
+```
+```console
+달리다.
+버스가 달리다.
+버스가 달리다.
 ```
 * 부모클래스로 자클래스 인스턴스를 참조할 수 있도록 하였음.
 
