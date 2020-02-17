@@ -292,11 +292,11 @@ public class Ch7Ex2 {
     public static void main(String[] args) {
         
         Car car = new Car();
-        car.run();
+        car.run();  // "달리다" 출력
         
         Bus bus = new Bus();
-        bus.run();
-        bus.ppangppang();
+        bus.run();  // "버스가 달리다" 출력
+        bus.ppangppang();  // "빵빵~" 출력
     }
 }
 ```
@@ -329,10 +329,10 @@ public class Mammal extends Animal {
 public class Ch7Ex3 {
 
     public static void main(String[] args) {
-
+    
         Bus bus = new Bus();
-        bus.run();
-        bus.ppangppang();
+        bus.run();  // "달리다" super()를 통해서 출력한 뒤에 "버스가 달리다"를 출력
+        bus.ppangppang();  // "빵빵~" 출력
     }
 }
 ```
