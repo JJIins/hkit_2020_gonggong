@@ -115,7 +115,7 @@ public class Main {
 }
 ```
 
-
+### 7.5 인터페이스를 이용한 다중상속
 
 
 ```java
@@ -144,6 +144,8 @@ public class Bus implements Car, Drone {
     }
 }
 ```
+
+### 7.6 인터페이스를 이용한 다형성
 ```java
 public class Main {
 
@@ -157,3 +159,53 @@ public class Main {
     }
 }
 ```
+
+### 7.7 인터페이스의 장점
+
+```
+- 개발시간을 단축시킬 수 있다.
+- 표준화가 가능하다.
+- 서로 관계없는 클래스들에게 관계를 맺어 줄 수 있다.
+- 독립적인 프로그래밍이 가능하다.
+```
+
+```java
+public class VideoDriver {
+
+    void displayText(String output) {
+        System.out.println("출력 : " + output);
+    }
+}
+```
+```java
+public class NvidiaVideoDriver extends VideoDriver {
+
+    @Override
+    public void displayText(String output) {
+        System.out.println("NVIDIA 출력 : " + output);        
+    }
+
+}
+```
+```java
+public class AmdVideoDriver extends VideoDriver {
+
+    @Override
+    public void displayText(String output) {
+        System.out.println("AMD 출력 : " + output);        
+    }
+}
+```
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        
+        VideoDriver vd = new AmdVideoDriver();
+        vd.displayText("Hello World");
+    }
+}
+```
+
+### 연습문제
+* 위의 VideoDriver 클래스를 인터페이스로 변경하세요.
