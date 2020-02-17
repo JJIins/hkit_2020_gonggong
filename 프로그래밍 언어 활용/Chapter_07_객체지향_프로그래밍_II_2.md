@@ -181,27 +181,17 @@ public class Main {
 
     public static void main(String[] args) {
     
-        Taxi taxi = new Taxi();
-        bus.run();
-        
-        Truck truck = new Truck();
-        truck.run();
-        
-        Car car;
-        
-        car = taxi;
+        Car car = new Bus();
         car.run();
         
-        car = truck;
+        car = new Taxi();
         car.run();
     }
 }
 ```
 ```console
+버스가 달리다.
 택시가 달리다.
-트럭이 달리다.
-택시가 달리다.
-트럭이 달리다.
 ```
 ### 5.2 참조변수의 형변환 [p.356]
 * 자손타입 -> 조상타입(Up-casting)
