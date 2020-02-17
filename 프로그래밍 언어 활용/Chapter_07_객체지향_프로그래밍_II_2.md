@@ -174,7 +174,35 @@ public class Main {
 버스가 달리다.
 버스가 달리다.
 ```
+### 연습문제
+* 다음 예제 실행할 수 있는 Car, Taxi 클래스를 구현하세요.
+```java
+public class Main {
 
+    public static void main(String[] args) {
+    
+        Taxi taxi = new Taxi();
+        bus.run();
+        
+        Truck truck = new Truck();
+        truck.run();
+        
+        Car car;
+        
+        car = taxi;
+        car.run();
+        
+        car = truck;
+        car.run();
+    }
+}
+```
+```console
+택시가 달리다.
+트럭이 달리다.
+택시가 달리다.
+트럭이 달리다.
+```
 ### 5.2 참조변수의 형변환 [p.356]
 * 자손타입 -> 조상타입(Up-casting)
      - 형변환 생략가능
