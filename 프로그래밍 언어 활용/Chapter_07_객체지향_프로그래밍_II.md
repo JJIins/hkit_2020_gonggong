@@ -197,7 +197,7 @@ public class Circle extends Point {
     int r;
     
     /*
-      draw 메서드 구현 부분
+      draw() 메서드 구현 부분
     */
 }
 ```
@@ -208,7 +208,7 @@ public class Main {
     public static void main(String[] args) {
         Circle c = new Circle();
         /*
-          코드 구현 부분
+          멤버변수 초기화 코드 구현 
         */
         c.draw();
     }
