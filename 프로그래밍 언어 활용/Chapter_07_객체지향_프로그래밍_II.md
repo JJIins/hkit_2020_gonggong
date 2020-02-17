@@ -104,11 +104,11 @@ public class Ch7Ex1 {
     public static void main(String[] args) {
         
         Car car = new Car();
-        car.run();
+        car.run();  // "달리다" 출력
         
         Bus bus = new Bus();
-        bus.run();
-        bus.ppangppang();
+        bus.run();  // "달리다" 출력
+        bus.ppangppang();  // "빵빵~" 
     }
 }
 ```
