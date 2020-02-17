@@ -437,6 +437,9 @@ class ImportTest
 ```java
 package kr.hkit.ch7;
 
+/*
+   Car와 Bus 클래스를 적절히 import 하세요.
+*/
 public class Ch7Ex5 {
 
     public static void main(String[] args) {
