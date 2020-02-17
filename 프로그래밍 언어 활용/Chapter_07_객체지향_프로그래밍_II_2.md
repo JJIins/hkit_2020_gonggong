@@ -174,62 +174,6 @@ public class Main {
 버스가 달리다.
 버스가 달리다.
 ```
-* 부모클래스로 자클래스 인스턴스를 참조할 수 있도록 하였음.
-
-```java
-public interface Queen {
-
-    public void spawn();
-}
-```
-```java
-public interface Soldier {
-
-    public void attack();
-}
-```
-```java
-public interface Worker {
-
-    public void work();
-}
-```
-```java
-public class Ant implements Worker, Soldier, Queen {
-
-    public void spawn() {
-        // TODO Auto-generated method stub
-        
-    }
-
-    public void attack() {
-        // TODO Auto-generated method stub
-        
-    }
-
-    public void work() {
-        // TODO Auto-generated method stub
-        
-    }
-
-}
-```
-```java
-public class Main {
-
-    public static void main(String[] args) {
-                
-        Queen queenAnt = new Ant(); 
-        queenAnt.spawn();
-        
-        Soldier soldierAnt = new Ant();
-        soldierAnt.attack();
-        
-        Worker workAnt = new Ant();
-        workAnt.work();        
-    }
-}
-```
 
 ### 5.2 참조변수의 형변환 [p.356]
 * 자손타입 -> 조상타입(Up-casting)
@@ -242,6 +186,7 @@ public class Main {
 
 ### 5.4 참조변수와 인스턴스의 연결 [p.364]
 * 멤버변수의 경우 참조변수의 타입에 따라 달라진다.
+  - 5.1의 멤버변수 다형성?? 예제가 여기에 해당함...
 
 ### 5.5 매개변수의 다형성 [p.367]
 * 참조변수의 다형성은 메서드의 매개변수에도 적용된다.(당연한 소리)
@@ -268,7 +213,7 @@ public class Audio extends Product {
 }
 ```
 ```java
-ublic class Main {
+public class Main {
 
     public static void main(String[] args) {
                 
@@ -280,4 +225,19 @@ ublic class Main {
     }
 }
 ```
+### 연습문제
+* 다음 예제 실행할 수 있는 Car, Bus, Taxi, Truck 클래스를 구현하세요.
+```java
+public class Main {
 
+    public static void main(String[] args) {
+                
+        Bus bus = new Bus();
+        Taxi taxi = new Taxi();
+        Truck truck = new Truck();
+        
+        Car[] cars = {bus, taxi, truck};
+    }
+}
+```
+```
