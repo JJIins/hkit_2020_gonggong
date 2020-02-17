@@ -104,6 +104,38 @@ public class Ch7Ex6 {
 ## 5 다형성
 
 ### 5.1 다형성이란? [p.354]
+* 
+```java
+public class Car {
+
+    void run() {
+        System.out.println("달리다.");
+    }
+}
+```
+```java
+public class Bus extends Car {
+
+    void run() {
+        System.out.println("버스가 달리다.");
+    }
+}
+```
+```java
+public class Main {
+
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.run();
+        
+        Bus bus = new Bus();
+        bus.run();
+        
+        Car car2 = new Bus();
+        car2.run();       
+    }
+}
+```
 * 부모클래스로 자클래스 인스턴스를 참조할 수 있도록 하였음.
 
 ```java
