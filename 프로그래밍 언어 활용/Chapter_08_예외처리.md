@@ -91,4 +91,139 @@ PW 입력 : 12345
 정상적으로 가입되었습니다.
 ```
 
+### try ~ catch
+```java
+public class Main {
+    
+    public static void main(String[] args) {     
+        login();
+    }
+    
+    public static void login() {
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.print("ID 입력 : ");
+        String id = scan.nextLine();
+        
+        try {
+            checkId(id);    
+        } catch (Exception e) {
+            scan.close();
+            return;
+        }
+
+        System.out.print("PW 입력 : ");
+        String pw = scan.nextLine();
+        
+        try {
+            checkPw(pw);    
+        } catch (Exception e) {
+            scan.close();
+            return;
+        }        
+                       
+        System.out.println("정상적으로 가입되었습니다.");        
+        scan.close();
+    }
+    
+    public static void checkId(String id) throws Exception {
+        if(id.length() < 5) {
+            throw new Exception();
+        }        
+    }
+    
+    public static void checkPw(String id) throws Exception {
+        if(id.length() < 4) {
+            throw new Exception();        
+        }        
+    }
+}
+```
+```java
+```
+```java
+public class Main {
+    
+    public static void main(String[] args) {     
+        login();
+    }
+    
+    public static void login() {
+        Scanner scan = new Scanner(System.in);
+        
+        try {
+            System.out.print("ID 입력 : ");
+            String id = scan.nextLine();
+            
+            checkId(id);
+            
+            System.out.print("PW 입력 : ");
+            String pw = scan.nextLine();
+           
+            checkPw(pw);
+                           
+            System.out.println("정상적으로 가입되었습니다.");        
+            scan.close();
+        } catch (Exception e) {
+            scan.close();
+            return;
+        }
+    }
+    
+    public static void checkId(String id) throws Exception {
+        if(id.length() < 5) {
+            throw new Exception();
+        }        
+    }
+    
+    public static void checkPw(String id) throws Exception {
+        if(id.length() < 4) {
+            throw new Exception();        
+        }        
+    }
+}
+```
+### final
+```java
+public class Main {
+    
+    public static void main(String[] args) {     
+        login();
+    }
+    
+    public static void login() {
+        Scanner scan = new Scanner(System.in);
+        
+        try {
+            System.out.print("ID 입력 : ");
+            String id = scan.nextLine();
+            
+            checkId(id);
+            
+            System.out.print("PW 입력 : ");
+            String pw = scan.nextLine();
+           
+            checkPw(pw);
+                           
+            System.out.println("정상적으로 가입되었습니다.");
+        } catch (Exception e) {            
+            return;
+        } finally {
+            scan.close();
+        }         
+    }
+    
+    public static void checkId(String id) throws Exception {
+        if(id.length() < 5) {
+            throw new Exception();
+        }        
+    }
+    
+    public static void checkPw(String id) throws Exception {
+        if(id.length() < 4) {
+            throw new Exception();        
+        }        
+    }
+}
+```
 ### 1.1 프로그램 오류
