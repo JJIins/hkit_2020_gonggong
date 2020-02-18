@@ -47,15 +47,16 @@ public class Main {
         
         System.out.print("ID 입력 : ");
         String id = scan.nextLine();
-        System.out.print("PW 입력 : ");
-        String pw = scan.nextLine();
-        
+                
         int error = checkId(id);
         
         if(error == 1) {
             scan.close();
             return;
         }
+        
+        System.out.print("PW 입력 : ");
+        String pw = scan.nextLine();
         
         error = checkPw(pw);
         
