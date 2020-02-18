@@ -1,7 +1,7 @@
 ## 4 제어자(modifier)
 
 ### 4.1 제어자란? [p.344]
-* 접근 제어자 : public, protected, drfault, private
+* 접근 제어자 : public, protected, (default), private
 * 그외 : static, final , abstract, native, transient, synchronized, volatile, strictfp
 
 ### 4.2 static - 클래스의, 공통적인 [p.344]
