@@ -296,3 +296,6 @@ public class Main {
     }
 }
 ```
+### 예제 7-37
+```java
+```
