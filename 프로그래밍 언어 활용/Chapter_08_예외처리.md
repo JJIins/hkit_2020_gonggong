@@ -34,7 +34,6 @@ public class Main {
 ```
 ### 연습문제
 * 앞에 예제를 수정하여 ID와 PW를 입력받으면 가입되는 프로그램을 완성하세요. 단, ID는 5자이상, PW는 4자 이상만 가입이 가능합니다.
-<!--
 ```java
 public class Main {
     
@@ -84,7 +83,6 @@ public class Main {
     }
 }
 ```
--->
 ```console
 ID 입력 : abcde
 PW 입력 : 12345
